@@ -8,18 +8,18 @@ Name VARCHAR(250)NOT NULL,
 Email VARCHAR(250)NOT NULL,
 PRIMARY KEY(Newslaterid))
 
+
 SELECT*FROM Newslater
 
-CREATE TABLE ContactUs(FirstName VARCHAR(250)NOT NULL,
+CREATE TABLE ContactUs(
+FirstName VARCHAR(250)NOT NULL,
 LastName VARCHAR(250)NOT NULL,
-Newslaterid VARCHAR(250) NOT NULL,
 PhoneNumber VARCHAR(250)NOT NULL,
 Email VARCHAR(250)NOT NULL,
-Location VARCHnpm AR(250)NOT NULL ,
+Location VARCHAR(250)NOT NULL ,
 Contactusid VARCHAR(250)NOT NULL,
-PRIMARY KEY(Contactusid),
-FOREIGN KEY(Newslaterid) REFERENCES Newslater(Newslaterid)
-)
+PRIMARY KEY(Contactusid)
+);
 SELECT *FROM ContactUs
 
 
@@ -28,11 +28,7 @@ CREATE TABLE Popup(
 Popupid VARCHAR(250)NOT NULL,
 Message VARCHAR(250)NOT NULL,
 Location VARCHAR(250)NOT NULL,
-Newslaterid VARCHAR(250) NOT NULL,
-Contactusid VARCHAR(250) NOT NULL,
-PRIMARY KEY(Popupid),
-FOREIGN KEY(Newslaterid) REFERENCES Newslater(Newslaterid),
-FOREIGN KEY(Contactusid) REFERENCES ContactUs(Contactusid)
+PRIMARY KEY(Popupid)
 )
 
 SELECT *FROM Popup
