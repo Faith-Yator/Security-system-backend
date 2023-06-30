@@ -1,12 +1,12 @@
 import { getContactuss,getContactus, newContactuss, updateContactus,deleteContactus } from "../controllers/Contactuscontroller.js";
 import {Router} from "express"
-//import { verifyToken } from "../middlewares/veryfytoken.js"
+import { VerifyToken } from "../middlewares/VerifyToken.js"
 
 
 export const ContactusRouter = Router()
 
-ContactusRouter.get("/",getContactuss)
-ContactusRouter.get("/:id",getContactus)
-ContactusRouter.post("/new", newContactuss)
-ContactusRouter.put("/:id/update",updateContactus)
-ContactusRouter.delete("/:id/delete" ,deleteContactus)
+ContactusRouter.get("/",VerifyToken,getContactuss)
+ContactusRouter.post("/new", VerifyToken,newContactuss)
+ContactusRouter.get("/:id",VerifyToken,getContactus)
+ContactusRouter.put("/:id/update",VerifyToken,updateContactus)
+ContactusRouter.delete("/:id/delete" ,VerifyToken,deleteContactus)

@@ -1,6 +1,6 @@
 import { getPopups,getPopup, newPopups, updatePopup,deletePopup } from "../controllers/Popupcontroller.js";
 import {Router} from "express"
-// import { verifyToken } from "../middlewares/veryfytoken.js"
+//import { VerifyToken } from "../middlewares/VerifyToken.js"
 
 
 export const PopupRouter = Router()

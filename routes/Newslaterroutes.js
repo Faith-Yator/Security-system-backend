@@ -1,6 +1,6 @@
 import { getNewslaters,getNewslater, newNewslaters, updateNewslater,deleteNewslater } from "../controllers/Newslatercontroller.js";
 import {Router} from "express"
-//import { verifyToken } from "../middlewares/veryfytoken.js"
+//import { VerifyToken } from "../middlewares/VerifyToken.js"
 
 
 export const NewslaterRouter = Router()

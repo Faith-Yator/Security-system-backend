@@ -39,12 +39,12 @@ export const getContactus = async (req, res) => {
       const connection = await sql.connect(dbConfig);
       await connection
         .request()
-        .input("Contactusid", sql.VarChar,Contactusid )
         .input("FirstName", sql.VarChar, FirstName)
         .input("LastName", sql.VarChar, LastName)
         .input("PhoneNumber", sql.VarChar, PhoneNumber)
         .input("Email", sql.VarChar, Email)
         .input("Location", sql.VarChar, Location)
+        .input("Contactusid", sql.VarChar,Contactusid )
         .query(query);
       res.json({ message: "ContactUs created successfully" });
     } catch (error) {
